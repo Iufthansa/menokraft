@@ -13,7 +13,7 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   if (isAuthenticated()) {
-    return navigate("/admin/dashboard");
+    return navigate("/admin-dashboard");
   }
 
   const [form, setForm] = useState<FormState>({
