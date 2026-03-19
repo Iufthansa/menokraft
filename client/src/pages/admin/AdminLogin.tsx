@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login, isAuthenticated } from "@/utils/auth";
+import { Navigate } from "react-router-dom";
 
 
 
@@ -12,8 +13,9 @@ type FormState = {
 const AdminLogin = () => {
   const navigate = useNavigate();
 
+
   if (isAuthenticated()) {
-    return navigate("/admin-dashboard");
+    return <Navigate to="/admin-dashboard" />;
   }
 
   const [form, setForm] = useState<FormState>({
@@ -55,7 +57,7 @@ const AdminLogin = () => {
       login(data.token);
 
       //  Navigate after login
-      navigate("/admin/dashboard");
+      navigate("/admin-dashboard");
 
     } catch (err: any) {
       setError(err.message);
