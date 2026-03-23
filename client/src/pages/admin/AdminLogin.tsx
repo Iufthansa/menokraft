@@ -15,7 +15,7 @@ const AdminLogin = () => {
 
 
   if (isAuthenticated()) {
-    return <Navigate to="/admin-dashboard" />;
+    return <Navigate to="/admin/dashboard" />;
   }
 
   const [form, setForm] = useState<FormState>({
@@ -39,7 +39,7 @@ const AdminLogin = () => {
     setError("");
 
     try {
-      const res = await fetch("https://menokraft.onrender.com/auth/login", {
+      const res = await fetch("http://localhost:5000/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -57,7 +57,7 @@ const AdminLogin = () => {
       login(data.token);
 
       //  Navigate after login
-      navigate("/admin-dashboard");
+      navigate("/admin/dashboard");
 
     } catch (err: any) {
       setError(err.message);

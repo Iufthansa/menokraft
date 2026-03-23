@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     const fetchApplications = async () => {
       const token = localStorage.getItem("adminToken");
 
-      const res = await fetch("https://menokraft.onrender.com/applications", {
+      const res = await fetch("http://localhost:5000/applications", {
         headers: {
           Authorization: `Bearer ${token}`
         }

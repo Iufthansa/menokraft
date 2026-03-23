@@ -145,7 +145,7 @@ export default function Applications() {
               <td className="border p-2">{app.job_title}</td>
               <td className="border p-2">
                 <button
-                  onClick={() => navigate(`/admin-applications/${app.id}`)}
+                  onClick={() => navigate(`/admin/applications/${app.id}`)}
                   className="text-blue-500"
                 >
                   View Application

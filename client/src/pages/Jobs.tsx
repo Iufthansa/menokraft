@@ -28,7 +28,7 @@ const Jobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await axios.get("https://menokraft.onrender.com/jobs");
+        const res = await axios.get("http://localhost:5000/jobs");
         setAllJobs(res.data);
       } catch (err) {
         console.error("Error fetching jobs:", err);

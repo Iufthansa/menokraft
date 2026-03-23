@@ -43,23 +43,23 @@ const App = () => (
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/admin-dashboard" element={
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={
           <PrivateRoute>
             <AdminDashboard />
           </PrivateRoute>
         }/>
-        <Route path="/admin-applications" element={
+        <Route path="/admin/applications" element={
           <PrivateRoute>
             <Applications />
           </PrivateRoute> 
         }/>
-        <Route path="/admin-jobs" element={
+        <Route path="/admin/jobs" element={
           <PrivateRoute>
             <UploadJobs />
           </PrivateRoute>
         } />
-        <Route path="/admin-applications/:id" element={
+        <Route path="/admin/applications/:id" element={
           <PrivateRoute>
             <ApplicationDetails />
           </PrivateRoute>  

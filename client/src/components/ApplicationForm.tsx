@@ -66,7 +66,7 @@ const ApplicationForm = ({ jobId, jobTitle }: ApplicationFormProps) => {
       console.log(pair[0], pair[1])
     };
 
-    await axios.post("https://menokraft.onrender.com/applications", formData, {
+    await axios.post("http://localhost:5000/applications", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
